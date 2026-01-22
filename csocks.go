@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"fmt"
 	"os"
 
 	"github.com/refgd/csocks-core"
@@ -63,14 +65,22 @@ func main() {
 				println(args[i] + " requires paths to both a certificate file and a key file")
 				os.Exit(0)
 			}
+		case "--public_key", "-p":
+			if i+1 < len(args) {
+				listenConfig.PublicKeyFile = args[i+1]
+				i++
+			} else {
+				println(args[i] + " requires public key file")
+				os.Exit(0)
+			}
 		default:
 			printHelp()
 		}
 	}
 
-	err := csocks.StartServer(listenConfig, quiet)
+	err := csocks.StartServer(context.Background(), listenConfig, quiet)
 	if err != nil {
-		printHelp()
+		fmt.Println(err)
 	}
 }
 
@@ -80,6 +90,7 @@ func printHelp() {
 	println(`    "--server, -s Server address" example: "--server 127.0.0.1:1080"`)
 	println(`    "--key, -k Server key" example: "--key server.crt server.key"`)
 	println(`    "--secret secret key" example: "--secret 123456"`)
+	println(`    "--public_key, -p"`)
 	println(`    "--http handle http proxy"`)
 	println(`    "--quiet, -q"`)
 	println(`    "--version"`)
