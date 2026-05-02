@@ -1,5 +1,5 @@
-github.com/refgd/csocks-core v0.0.3 h1:4cdWkyGWLOXyLxksHsEnBA6TI3vlR3Q56c5Cp7vjqEY=
-github.com/refgd/csocks-core v0.0.3/go.mod h1:tPJWGxwTAcJtXVXqhcG3iJltbYFGYpjc9g9WFt4ACnk=
+github.com/refgd/csocks-core v0.0.4 h1:cB2ZW8GwSTonWtHEPrwTrwvkZpFjlkd+Emmqx7E6PMo=
+github.com/refgd/csocks-core v0.0.4/go.mod h1:tPJWGxwTAcJtXVXqhcG3iJltbYFGYpjc9g9WFt4ACnk=
 golang.org/x/net v0.53.0 h1:d+qAbo5L0orcWAr0a9JweQpjXF19LMXJE8Ey7hwOdUA=
 golang.org/x/net v0.53.0/go.mod h1:JvMuJH7rrdiCfbeHoo3fCQU24Lf5JJwT9W3sJFulfgs=
 golang.org/x/text v0.36.0 h1:JfKh3XmcRPqZPKevfXVpI1wXPTqbkE5f7JA92a55Yxg=
